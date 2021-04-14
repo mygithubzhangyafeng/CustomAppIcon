@@ -11,7 +11,7 @@ extension UIViewController {
     public class func initializeMethod() {
         if self != UIViewController.self {
             return
-        }
+        }  
         // Method Swizzling
         DispatchQueue.once(token: "ChangeIcon") {
             let orignal = class_getInstanceMethod(self, #selector(UIViewController.present(_:animated:completion:)))
